@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+
+  <title>发表话题</title> 
+
+{% end %}
+
+
+{% block body %}
+
+  <div class="warp"> 
+      <form method="post" action="/{{ uid }}/t/new" id="newthread">
+    <input type="hidden" name="CSRFToken" value="29bd4b09" />
+    <input type="hidden" name="sId" value="264151824" />
+
+    <div class="sendInfo wot pr"> 
+     <span class="locationCon address f13 c1" closestatus="2">问题：</span> 
+    </div>
+    
+    <div class="sendTit pr"> 
+     <span class="tagTopic db pa" style="width:50px;display:none;"></span> 
+     <textarea id="title" name="title" cols="" rows="" class="sInput f13" placeholder="写下你的问题"></textarea> 
+    </div> 
+
+    <div class="sendInfo wot pr"> 
+     <span class="locationCon address f13 c1" closestatus="2">详细说明：</span> 
+      <div class="pa sendOperBtn">
+        <a data-id="1" href="javascript:;" class="operatIcon iconSendImg db f21 c9 cf pr" style="z-index:1;"></a>
+        <input type="file" class="pa" style="height:100%;width:100%;left:0;top:0;z-index:200;opacity:0;filter:alpha(opacity=0);-ms-filter:'alpha(opacity=0)';" id="fistUploadFile" accept="image/*" single="" />
+      </div>
+    </div>
+
+    <div class="sendCon pr"> 
+     <span class="tagTopic db pa" style="width:50px;display:none;"></span> 
+     <textarea id="content" name="content" cols="" rows="" class="sInput f13" placeholder="问题背景、条件等详细信息"></textarea> 
+    </div> 
+
+    <div class="photoList" style="display:none;"> 
+     <ul> 
+      <li class="on" id="addPic"> <input type="file" class="on needsclick" style="z-index:200;opacity:0;filter:alpha(opacity=0);-ms-filter:'alpha(opacity=0)';" id="uploadFile" accept="image/*" single="" /> </li> 
+     </ul> 
+     <p class="textTip f12">还可上传<span id="onlyUploadNum">8</span>张照片呦~</p> 
+    </div> 
+
+    <div class="sendInfo wot pr"> 
+     <label>
+       <input type="checkbox" name="isprivate" value="1">
+       <span class="address f13 c6">私有</span>
+
+       <span class="form-split">&nbsp;</span>
+
+       <input type="checkbox" name="isanon" value="1">
+       <span class="address f13 c6">匿名</span>
+     </label>
+
+     <div class="sendOperBtn pa"> 
+      <a href="javascript:;" class="sendBtn brSmall f13 db c2" id="submitButton">发送</a> 
+     </div>
+    </div>
+
+    <div class="operatingBox"> 
+     <div class="operatList tipLayer" style="display:none;margin:0;border:0;"> 
+
+      <div class="expreBox" style="display:none;" id="expreBox"> 
+       <div class="expressionTab pr"> 
+        <div class="expressionMenu" style="position: relative;"> 
+         <a href="javascript:;" class="on" id="emo0" title="默认">默认</a>
+        </div>
+        <a href="javascript:;" class="eR db iconArrowR cf pa c9" style="display:none;"></a>
+       </div>
+       <div class="expreList" id="expreList"> 
+        <ul class="expreCon expreConNew" id="exp_emo0" style="position: relative;"> 
+        </ul>
+       </div>
+       <p class="pNumCon" id="exp_emo0_page"> <a href="javascript:;" class=" on  pNum db"></a> <a href="javascript:;" class=" pNum db"></a> <a href="javascript:;" class=" pNum db"></a> <a href="javascript:;" class=" pNum db"></a> <a href="javascript:;" class=" pNum db"></a> </p> 
+      </div>
+     </div>
+     <div class="operatList photoTipsBox" style="padding:23px 15px 15px;height:40px;display:none;"> 
+     </div>
+     <div class="operatList tagBox" style="display:none;"> 
+     </div>
+    </div>
+   </form>
+  </div>
+
+{% end %}
+
+{% block footer %}
+
+  <div class="topBar">
+   <div class="topBarCon pr"> 
+    <a href="javascript:;" class="qBackBtn" id="goback"><i class="upBtn cf db"></i>返回</a> 
+    <h2 class="qTitle">发表话题</h2> 
+   </div> 
+  </div> 
+
+  <div onclick="location.href='javascript:;'" class="copyRight ht">
+   微社区，精彩在你身边
+  </div> 
+
+  <script type="text/javascript">
+    var shareUrl = 'http://m.wsq.qq.com/264151824?_wv=1&filterType=&source=custom',
+    shareTitle = '分享自#龙门客栈#',
+    shareDesc = '《龙斌大话电影》是互联网首档超人气影评脱口秀节目，每周一、四更新。主播龙斌用最接地气的犀利吐槽...',
+    shareImgUrl = 'http://shp.qlogo.cn/gqclogo/0/264151824/200?max-age=2592000&amp;t=1426579479';
+  </script> 
+
+  <script data-main="/static/js/new" src="/static/js/vendor/require.js"></script>
+
+{% end %}
+

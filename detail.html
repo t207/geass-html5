@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+
+  <title>龙门客栈</title>
+
+{% end %}
+
+
+{% block body %}
+
+  <style>
+   #wrap>div{-webkit-transform:translateZ(0);}/*注意这里*/
+  </style>
+
+  <div class="warp" onselectstart="return false;"> 
+
+   <div class="topicM worldC" style="display:none;" id="pEvent">
+    <img class="topicMImg" src="" alt="图片" id="pEventImg" />
+   </div> 
+
+   <div class="detail"> 
+    <div class="detailTitle pr">
+     <h2 class="c6 f16">话题来自：<span class="c7">龙门客栈</span></h2> 
+     <span class="iconArrowR db pa c9 cf"></span> 
+    </div> 
+   </div> 
+
+   <div class="detailBox"> 
+    <div class="topicCon" id="t_3569_0_0"> 
+     <div class="personImgDate bn pr"> 
+         <i class="perImg mr db fl pr"> <a href="http://m.wsq.qq.com/profile/245300167"><img data-src="{{ result['avatar'] }}" class="bImg brBig lazy-loaded" width="35" height="35" alt="avatar" /></a> </i> 
+      <h3 class="title f13 fn c6">{{ result['author'] }} </h3> 
+      <p class="f11"><span class="time c9 mr">{{ result['hctime'] }}</span><span class="address c6"><i class="iconloc f14 c1 cf"></i>哈尔滨市 通顺街</span></p> 
+      <a class="iconAd cf f16 c9 pa db PerPopBtn" tid="3569" href="javascript:;"></a> 
+      <div class="adPop pa perPop" style="display:none;"> 
+       <div class="adBCon pr  f12" tid="3569" uid="245300167" author="Dr.Liu"> 
+        <p btntype="markAd">屏蔽</p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="detailCon"> 
+      <div class="dCon f16">
+        {{ result['content'] }}
+      </div> 
+      <div class="threadPic pr"> 
+
+      {% for p in result['pickeys'] %}
+        <span> <img class="dImg" data-src="{{ p }}"/> </span> 
+      {% end %}
+
+      </div>
+
+      <div class="operation oh"> 
+       <!--
+       <span class="replyShare db c9 fr f13"> <a href="javascript:;" class="like c9" tid="3569"><i class="iconNoPraise f18 cf"></i>2</a> <a href="javascript:;" id="support" class="shareBtn c9" _qzone="http://m.wsq.qq.com/shareDirect?site=%E9%BE%99%E9%97%A8%E5%AE%A2%E6%A0%88&amp;title=%E5%88%86%E4%BA%AB%E8%87%AA%23%E9%BE%99%E9%97%A8%E5%AE%A2%E6%A0%88%23&amp;summary=%E7%9C%9F%E6%98%AF%E9%9A%BE%E4%B8%BA%E7%BC%96%E5%89%A7%E4%BA%86%EF%BC%8C%E4%B8%8A%E4%B8%80%E9%83%A8%E9%A3%9E%E6%9C%BA%E3%80%81%E5%9D%A6%E5%85%8B%E3%80%81%E5%A4%A7%E7%82%AE%E9%83%BD%E7%94%A8%E5%AE%8C%E4%BA%86%EF%BC%8C%E8%BF%99%E4%B8%80%E9%83%A8%E7%8E%A9%E8%B5%B7%E4%BA%86%E7%A9%BA%E4%B8%AD%E9%A3%9E%E8%BD%A6%E3%80%82%E7%9C%9F%E6%9C%9F%E5%BE%85%E4%B8%8B%E4%B8%80%E9%83%A8%E5%AF%BC%E6%BC%94%E5%92%8C%E7%BC%96%E5%89%A7%E4%BC%9A...&amp;targetUrl=http%3A%2F%2Fm.wsq.qq.com%2Fttp%3A%2F%2Fm.wsq.qq.com%2F264151824%2Ft%2F3569%3F_wv%3D1%26source%3Dcustom&amp;pageUrl=http%3A%2F%2Fm.wsq.qq.com%2F264151824&amp;imageUrl=http%3A%2F%2Fugc.qpic.cn%2Fquan_pics%2F0%2F264151824_1592%2F1280%3Fmax-age%3D2592000%26t%3D0&amp;type=qzone"><i class="iconShare f18 cf"></i></a> <a href="javascript:;" class="threadReply c9" tid="3569" onclick="pgvSendClick({hottag:'QUAN.INDEX.REPLY.LINK'});"><i class="iconReply f18 cf"></i><span id="rCount">2</span></a> </span> 
+       -->
+       <span class="replyShare db c9 fr f13"> <a href="javascript:;" class="like c9" tid="3569"><i class="iconNoPraise f18 cf"></i>2</a> <a href="javascript:;" id="support" class="shareBtn c9" _qzone=""><i class="iconShare f18 cf"></i></a> <a href="javascript:;" class="threadReply c9" tid="3569" onclick=""><i class="iconReply f18 cf"></i><span id="rCount">2</span></a> </span> 
+      </div> 
+     </div> 
+
+     <div id="similarTopicBox" style="">
+      <div class="similarTopic"> 
+       <div class="similarTopicCon evtTopicCon" data-link="/264151824/t/3346"> 
+        <a href="javascript:;" class="evtAuthorUrl" data-link="/profile/242994209"><img data-src="http://wx.qlogo.cn/mmopen/vd8yNL3TS9Ab8vXHibQQPtQQ9z8YZibH2UD2sXMAu0BIdeFfcWA8gxnqPNazURPUnwVlB5cHJBEvt2jvbWD3LDbDjyUQm8YvH5/64?max-age=1296000" class="sImg brBig pa db" width="20" height="20" alt="头像" /> <span class="c7">龙斌</span> </a> 
+        <p>本周五录棚，《钟馗伏魔 雪妖魔灵》、《被嫌弃的松子的一生》《告白》、《如父如子》、《北京国际电影节特辑》（上）（下）。就上述影片和选题，留下你们的评论吧。我将在周五前从中选出有价值的评论在节目中与大家一起分享！ps：请在每一个选题下面单独做出评论哦</p> 
+       </div> 
+       <div class="similarTopicTit"> 
+        <a href="javascript:;" class="evtMoreHot" data-link="/264151824/recommend?tId=3569">更多相关话题<i class="iconReply f18 cf"></i></a> 
+       </div> 
+      </div>
+     </div> 
+
+    </div> 
+
+    <div id="hotLabelBox" class="hotLabel" style="display: none">
+     <h3 class="fl pr"><i class="iconDetailReply cf f16 mr5 c4"></i>热门回复</h3>
+    </div> 
+    <div class="topicList"> 
+     <ul id="hotReplyList"> 
+     </ul> 
+    </div> 
+    <div id="allLabelBox" class="hotLabel" style=""> 
+     <h3 class="fl allTitle pr"><i class="iconDetailReply cf f16 mr5 c7"></i>全部回复</h3> 
+     <span class="sortCon fr db"><a href="javascript:;" class="db c6 f12 evtReplySort"><i class="iconReverse cf mr5 f16"></i>倒序排列</a></span> 
+    </div> 
+    <div class="topicList"> 
+     <ul id="allReplyList" style="height: auto;"> 
+     </ul> 
+    </div> 
+   </div> 
+
+   <div class="loading" id="loadNext" style="display: none;"> 
+    <div class="loadicon"> 
+     <span class="blockG" id="rotateG_01"></span> 
+     <span class="blockG" id="rotateG_02"></span> 
+     <span class="blockG" id="rotateG_03"></span> 
+     <span class="blockG" id="rotateG_04"></span> 
+     <span class="blockG" id="rotateG_05"></span> 
+     <span class="blockG" id="rotateG_06"></span> 
+     <span class="blockG" id="rotateG_07"></span> 
+     <span class="blockG" id="rotateG_08"></span> 
+    </div> 正在加载... 
+   </div> 
+
+   <div class="loading" id="showAll" style="display:none;">
+    已显示全部
+   </div> 
+   <div class="loading" id="showAllReply" style="display:none;">
+    点击查看全部回复
+   </div> 
+   <div id="loadNextPos"></div> 
+
+  </div> 
+  <!--底部bar--> 
+
+  <script id="tmpl_replyForm" type="text/html">
+    <div class="popLayer pSpace brNone" style="width:100%">
+    <form method="post" id="replyForm">
+        <input type="hidden" name="CSRFToken" value="2ffef155">
+        <input type="hidden" name="sId" value="<%= data.sId %>">
+        <input type="hidden" name="tid" value="<%= data.tId %>">
+        <input type="hidden" name="pid" value="<%= data.pId %>">
+        <input type="hidden" name="parentId" value="<%= data.parentId %>">
+        <div class="sendRCon">
+            <textarea id="content" name="content" cols="" rows="" class="sInput f13" placeholder="回两句吧..."></textarea>
+        </div>
+        <div class="sendNav">
+            <ul>
+                <li>
+                    <a data-id='0' href="javascript:;" class="operatIcon iconExpression f21 db c9 cf"></a>
+                </li>
+                <li class="pr uploadPicBox">
+                    <a data-id='1' href="javascript:;" class="operatIcon iconSendImg db f21 c9 cf pr" style="z-index:1;"></a>
+                </li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li><a id="cBtn" href="javascript:;" class="cancelNewBtn brSmall f13 db fr c3 close">取消</a></li>
+                <li><a id="comBtn" href="javascript:;" class="sendBtn brSmall f13 db c2">发送</a>
+                </li>
+            </ul>
+        </div>
+        <div class="operatingBox">
+            <div class="operatList tipLayer" style="display:none;margin:0;border:0;">
+            </div>
+            <div class="operatList photoTipsBox" style="display:none;height:213px;background-color:#efefef;border-top:1px solid #e2e2e2;">
+                <div class="photoList">
+                    <ul>
+                        <li class="on" id="addPic">
+                        <input type="file" class="on needsclick" style="z-index:200;opacity:0;filter:alpha(opacity=0);-ms-filter:'alpha(opacity=0)';" id="uploadFile" accept="image/*" single>
+                        </li>
+                    </ul>
+                    <p class="textTip f12">还可上传<span id="onlyUploadNum">8</span>张照片呦~</p>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+    </div>
+  </script>
+
+  <script id="tmpl_sideBar" type="text/html">
+  </script>
+
+  <script id="tmpl_customTag" type="text/html">
+  </script>
+
+{% end %}
+
+
+{% block footer %}
+
+  <div class="topBar"> 
+   <div class="topBarCon pr"> 
+    <a href="javascript:;" class="qBackBtn" id="goback"> <i class="upBtn cf db"></i>返回</a> 
+    <h2 class="qTitle">龙门客栈</h2> 
+    <a href="javascript:;" id="mqOption" issite="1" class="moreC qMore db"> <i class="circle">●</i> <i class="circle">●</i> <i class="circle">●</i> <i class="db numP" id="navMsgNum" style="display:none;">0</i></a> 
+   </div>
+  </div>
+
+  <div id="goTop" class="floatLayer br db" style="display: none;">
+   <a href="javascript:;" class="upBtn cf db"></a>
+  </div>
+
+  <form id="delThreadForm" name="delThreadForm" action="http://m.wsq.qq.com/264151824/t/del" method="post"> 
+   <input type="hidden" name="CSRFToken" value="29bd4b09" /> 
+   <input type="hidden" name="tIds[]" />
+  </form>
+
+  <div onclick="location.href='http://m.wsq.qq.com/93617818'" class="copyRight ht">
+   微社区，精彩在你身边
+  </div>
+
+  <script type="text/javascript">
+    var shareUrl = 'http://m.wsq.qq.com/264151824/t/3569?_wv=1&source=custom',
+    shareTitle = '分享自#龙门客栈#',
+    shareDesc = '真是难为编剧了，上一部飞机、坦克、大炮都用完了，这一部玩起了空中飞车。真期待下一部导演和编剧会...',
+    shareImgUrl = 'http://shp.qlogo.cn/gqclogo/0/264151824/200?max-age=2592000&amp;t=1426579479';
+  </script>
+
+  <script data-main="/static/js/detail" src="/static/js/vendor/require.js"></script>
+
+{% end %}
